@@ -1,6 +1,6 @@
 FROM photon:2.0
 
-RUN tdnf install -y nginx >> /dev/null\
+RUN tdnf install -y nginx-1.15.7-1.el7_4.ngx.x86_64 >> /dev/null\
     && ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log \
     && tdnf clean all
